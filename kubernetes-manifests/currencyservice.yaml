@@ -18,6 +18,8 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
+    tags.datadoghq.com/env: "idetest"
+    tags.datadoghq.com/service: "currencyservice"
 spec:
   selector:
     matchLabels:
@@ -26,6 +28,10 @@ spec:
     metadata:
       labels:
         app: currencyservice
+        tags.datadoghq.com/service: "currencyservice"
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/js-lib.version: "latest"
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
