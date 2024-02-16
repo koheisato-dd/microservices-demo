@@ -29,9 +29,9 @@ spec:
       labels:
         app: cartservice
         tags.datadoghq.com/service: "cartservice"
-        admission.datadoghq.com/enabled: "true"
-      annotations:
-        admission.datadoghq.com/dotnet-lib.version: "latest"
+      #  admission.datadoghq.com/enabled: "true"
+      #annotations:
+      #  admission.datadoghq.com/dotnet-lib.version: "latest"
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
