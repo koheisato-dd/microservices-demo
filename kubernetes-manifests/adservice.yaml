@@ -18,8 +18,8 @@ metadata:
   name: adservice
   labels:
     app: adservice
-      tags.datadoghq.com/env: "idetest"
-      tags.datadoghq.com/service: "adservice"
+    tags.datadoghq.com/env: "idetest"
+    tags.datadoghq.com/service: "adservice"
 spec:
   selector:
     matchLabels:
