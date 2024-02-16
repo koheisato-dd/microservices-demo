@@ -39,5 +39,9 @@ COPY ./static ./static
 # See https://golang.org/pkg/runtime/
 ENV GOTRACEBACK=single
 
+RUN go install github.com/datadog/orchestrion@latest && orchestrion
+
 EXPOSE 8080
 ENTRYPOINT ["/src/server"]
+
+
