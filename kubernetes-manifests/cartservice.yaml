@@ -18,6 +18,8 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
+    tags.datadoghq.com/env: "idetest"
+    tags.datadoghq.com/service: "cartservice"
 spec:
   selector:
     matchLabels:
@@ -26,6 +28,10 @@ spec:
     metadata:
       labels:
         app: cartservice
+        tags.datadoghq.com/service: "cartservice"
+        admission.datadoghq.com/enabled: "true"
+      annotations:
+        admission.datadoghq.com/dotnet-lib.version: "latest"
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
