@@ -18,6 +18,7 @@ metadata:
   name: checkoutservice
   labels:
     app: checkoutservice
+    tags.datadoghq.com/env: "idetest"
 spec:
   selector:
     matchLabels:
